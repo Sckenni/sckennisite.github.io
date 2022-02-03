@@ -1,15 +1,142 @@
-<!doctype html>
+<!Doctype html>
 <html>
-				<head>
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
-
-<script type="text/javascript">
+<head>
+				<script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+				<script type="text/javascript">
   VK.init({apiId: 8070143, onlyWidgets: true});
 </script>
+<title>Комментарии</title>
+<link rel="shortcut icon" href="https://okeygeek.ru/wp-content/uploads/2019/05/w512h5121380984532comment.png">
 </head>
 <body>
+	<style>
+	body
+	{
+	 background:
+	  url(files/Desert.jpg)
+	  no-repeat
+	  fixed;
+	 background-size: cover;
+	}
+	</style>
+	 <style>
+  .feedback {
+  border-radius: 0 10px 10px 0;
+  width: 300px;
+  background: #333;
+  color: #fff;
+  position: fixed;
+  min-height: 150px;
+  top: -180px; left: 800px;
+  border-bottom: 20px solid #fc0;
+  padding: 10px;
+  transition: 0.6s ease-in;
+ }
+  .feedback img {
+  float: left;
+  margin: 0 10px 0 0;
+ }
+  .feedback::after {
+  content: 'Настройки';
+  color: #000;
+  position: absolute;
+  right: 150px; bottom: -40px;
+ }
+  .feedback:hover {
+  top: 0;
+
+ }
+ </style>
+
+ <body>
+ <style>
+  .chapters {
+  margin: 0; padding: 0;
+     background: url(files/gradient.jpg)
+  }
+  .chapters li {
+  display: inline-block;
+  }
+  .chapters li::before {
+  content: '///';
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #fff;
+  }
+  .chapters li:first-child::before {
+  content: '';
+  }
+	<head>
+		<title></title>
+		<style>
+			body {
+				background: black no-repeat center;
+				height: 100vh;
+				margin: 0;
+			}
+
+			@media (max-width: 1200px) {
+				body.day {
+					background-image: url(https://placeimg.com/640/480/nature/grayscale);
+				}
+				body.night {
+					background-image: url(https://placeimg.com/640/480/nature);
+				}
+			}
+
+			@media not all and (max-width: 1200px) {
+				body.day {
+					background-image: url(https://placeimg.com/1280/960/nature/grayscale);
+				}
+				body.night {
+					background-image: url(https://placeimg.com/1280/960/nature);
+				}
+			}
+
+
+			button:hover, button:focus {
+				color: white;
+				box-shadow: inset 0 0 0 2em var(--color);
+				 
+			}
+
+		</style>
+		<script>
+
+			var count = 0;
+			
+			function setBg() {
+				document.body.classList.toggle("day", count % 2 === 0);
+				document.body.classList.toggle("night", count % 2 === 1);
+				count++;
+			}
+			document.addEventListener("DOMContentLoaded", setBg);
+
+		</script>
+  </body>
+  </style>
+</head>
+<body>
+ <ul class="chapters">
+  <li><button><a href="index.html">Главная</a></li>
+  <li><button><a href="gamescompleted.html">Игры которые я прошёл</a></li>
+  <li><button><a href="notes.html">�������</a></li>
+  <li><button><a href="index1.html">��� �����</a></li>
+ <li><button><a href="entertainment.html">Развлекательное</a></li>
+ </ul>
+ <div class="feedback">
+  <img src="files\Desert.jpg" alt="" width="20" height="20">
+  <dt><button onclick="setBg();">Поменять фон</button></dt>
+  <img src="files\profile.png" alt="" width="20" height="20">
+  <dt><button><a href="registration.html">Регистрация</a></dt>
+ </div>
+ </body>
+	<hr>
+	<h1> <b> <font face="Impact">Комментарии (нужно войти в вк)</font> </b> </h1> 
+	<br>
 <div id="vk_comments"></div>
 <script type="text/javascript">
 VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
 </script>
-</body>
+	</body>
+</html>
