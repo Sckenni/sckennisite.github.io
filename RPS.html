@@ -58,7 +58,7 @@
   </style>
   <div class="container">
     <h1>Камень, Ножницы, Бумага!</h1>
-    <h2>Выиграй 5 раундов для победы</h2>
+    <h2>Выиграй 5 раундов для победы. Всё рандомно!)</h2>
     <h2>
       Ты <span id="p-score">0</span> - <span id="c-score">0</span> Бот
     </h2>
@@ -109,24 +109,26 @@
     function compareInputs(pInput, cInput) {
       const currentMatch = `${pInput} vs ${cInput}`;
       if (pInput === cInput) {
-        alert(`$Точно? :)`);
+        alert(`Точно?`);
         return;
       }
 
       if (pInput === "Rock") {
         if (cInput === "Scissors") {
-          alert(`$Точно? :)`);
+          alert(`Точно?`);
           pScore++;
         } else {
-          alert(`$Точно? :)`);
+          alert(`Точно?`);
           cScore++;
         }
       }
       //Check for Paper
       else if (pInput === "Paper") {
         if (cInput === "Rock") {
+          alert(`Точно?`);
           pScore++;
         } else {
+          alert(`Точно?`);
           cScore++;
         }
       }
