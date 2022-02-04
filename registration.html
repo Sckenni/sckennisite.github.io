@@ -1,14 +1,148 @@
-<!DOCTYPE HTML>
+<!Doctype html>
 <html>
 <head>
-<title>����������� �� �����</title>
+<meta charset="utf-8">
+<title>Регистрация</title>
+<link rel="shortcut icon" href="data:image/png;base64,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">
+<script
+  type="text/javascript"
+  src="https://vk.com/js/api/openapi.js?168"
+  charset="windows-1251"
+></script>
+<script type="text/javascript">
+  VK?.init({apiId: 8070143);
+</script>
 </head>
 <body>
-<form action="index.html">
-  <p>�����������</p>
-  <p>Email: <input type="email" maxlength="25" size="40" name="email"></p>
-  <p>�����: <input maxlength="25" size="40" name="login"></p>
-  <p>������: <input type="password" maxlength="25" size="40" name="pass"></p>
-  <p><input type="submit" value="�����������"></p>
-</body>
+	<style>
+	body
+	{
+	 background:
+	  url(files/Desert.jpg)
+	  no-repeat
+	  fixed;
+	 background-size: cover;
+	}
+	</style>
+	 <style>
+  .feedback {
+  border-radius: 0 10px 10px 0;
+  width: 300px;
+  background: #333;
+  color: #fff;
+  position: fixed;
+  min-height: 150px;
+  top: -180px; left: 800px;
+  border-bottom: 20px solid #fc0;
+  padding: 10px;
+  transition: 0.6s ease-in;
+ }
+  .feedback img {
+  float: left;
+  margin: 0 10px 0 0;
+ }
+  .feedback::after {
+  content: 'Настройки';
+  color: #000;
+  position: absolute;
+  right: 150px; bottom: -40px;
+ }
+  .feedback:hover {
+  top: 0;
+
+ }
+ </style>
+
+ <body>
+ <style>
+  .chapters {
+  margin: 0; padding: 0;
+     background: url(files/gradient.jpg)
+  }
+  .chapters li {
+  display: inline-block;
+  }
+  .chapters li::before {
+  content: '///';
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #fff;
+  }
+  .chapters li:first-child::before {
+  content: '';
+  }
+	<head>
+		<title></title>
+		<style>
+			body {
+				background: black no-repeat center;
+				height: 100vh;
+				margin: 0;
+			}
+
+			@media (max-width: 1200px) {
+				body.night {
+					background-image: url(https://placeimg.com/640/480/nature/grayscale);
+				}
+				body.day {
+					background-image: url(https://placeimg.com/640/480/nature);
+				}
+			}
+
+			@media not all and (max-width: 1200px) {
+				body.night {
+					background-image: url(https://placeimg.com/1280/960/nature/grayscale);
+				}
+				body.day {
+					background-image: url(https://placeimg.com/1280/960/nature);
+				}
+			}
+
+
+			button:hover, button:focus {
+				color: white;
+				box-shadow: inset 0 0 0 2em var(--color);
+				 
+			}
+
+		</style>
+		<script>
+
+			var count = 0;
+			
+			function setBg() {
+				document.body.classList.toggle("day", count % 2 === 0);
+				document.body.classList.toggle("night", count % 2 === 1);
+				count++;
+			}
+			document.addEventListener("DOMContentLoaded", setBg);
+
+		</script>
+  </body>
+  </style>
+</head>
+<body>
+ <ul class="chapters">
+  <li><button><a href="index.html">Главная</a></li>
+  <li><button><a href="gamescompleted.html">Игры которые я прошёл</a></li>
+  <li><button><a href="notes.html">Заметки</a></li>
+  <li><button><a href="index1.html">Мои Файлы</a></li>
+ <li><button><a href="entertainment.html">Развлекательное</a></li>
+ <li><button><a href="comments.html">Стена с комментариями</a></li>
+ </ul>
+ <div class="feedback">
+  <img src="files\Desert.jpg" alt="" width="20" height="20">
+  <dt><button onclick="setBg();">Поменять фон</button></dt>
+  <img src="files\profile.png" alt="" width="20" height="20">
+  <dt><button><a href="registration.html">Регистрация</a></dt>
+ </div>
+ </body>
+	<hr>
+	<h1> <b> <font face="Impact">Регистрация через VK</font> </b> </h1> 
+	<br>
+	<div id="vk_auth"></div>
+<script type="text/javascript">
+  VK.Widgets.Auth("vk_auth", {authUrl: "/dev/Login"});
+</script>
+	</body>
 </html>
