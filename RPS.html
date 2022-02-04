@@ -1,3 +1,8 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>КНБ</title>
+</head>
 <body>
   <style>
     body {
@@ -51,10 +56,10 @@
     }
   </style>
   <div class="container">
-    <h1>The Rock Paper Scissors Game</h1>
-    <h2>Win five rounds to be the victor</h2>
+    <h1>Камень, Ножницы, Бумага!</h1>
+    <h2>Выиграй 5 раундов для победы</h2>
     <h2>
-      Player <span id="p-score">0</span> - <span id="c-score">0</span> Computer
+      Ты <span id="p-score">0</span> - <span id="c-score">0</span> Бот
     </h2>
     <div class="display-moves">
       <div class="move">
@@ -65,7 +70,7 @@
         <img id="c-move" src="./assets/Rock.svg">
       </div>
     </div>
-    <h2>Click on the image below to select your move:<h2>
+    <h2>Нажми на изображение снизу:<h2>
     <div class="action">
       <input class="options" type="image" src="./assets/Rock.svg" value="Rock" />
       <input class="options" type="image" src="./assets/Paper.svg" value="Paper" />
@@ -103,36 +108,36 @@
     function compareInputs(pInput, cInput) {
       const currentMatch = `${pInput} vs ${cInput}`;
       if (pInput === cInput) {
-        alert(`${currentMatch} is a Tie`);
+        alert(`${currentMatch} ничья`);
         return;
       }
 
       if (pInput === "Rock") {
         if (cInput === "Scissors") {
-          alert(`${currentMatch} = You Win`);
+          alert(`${currentMatch} = Ты выиграл`);
           pScore++;
         } else {
-          alert(`${currentMatch} = Computer Wins`);
+          alert(`${currentMatch} = Бот выиграл`);
           cScore++;
         }
       }
       //Check for Paper
       else if (pInput === "Paper") {
         if (cInput === "Rock") {
-          alert(`${currentMatch} = You Win`);
+          alert(`${currentMatch} = Ты выиград`);
           pScore++;
         } else {
-          alert(`${currentMatch} = Computer Wins`);
+          alert(`${currentMatch} = Бот выиграл`);
           cScore++;
         }
       }
       //Check for Scissors
       else {
         if (cInput === "Paper") {
-          alert(`${currentMatch} = You Win`);
+          alert(`${currentMatch} = Ты выиграл`);
           pScore++;
         } else {
-          alert(`${currentMatch} = Computer Wins`);
+          alert(`${currentMatch} = Бот выиграл`);
           cScore++;
         }
       }
@@ -147,8 +152,8 @@
       if (pScore === 5 || cScore === 5) {
         const winner =
           pScore === 5
-            ? "You win the game! Congratulations!"
-            : "Computer wins the game! Try again next time!";
+            ? "Ты выиграл эту игру! Поздравляю"
+            : "Да емае, бот выиграл( Попробуй снова";
         alert(winner);
         return true;
       }
