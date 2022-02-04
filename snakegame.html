@@ -1,9 +1,51 @@
-<!DOCTYPE html>
+class=""<!DOCTYPE html>
 <html>
 <head>
+	 <meta charset="utf-8">
   <title>Змейка</title>
-  <li><button><a href="index.html">Назад в главную</a></li>
+  <li><button><a href="index.html">Обратно на главную</a></li>
   <style>
+  				.buttonR{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: 100px;
+        left: 600px;
+        width: 64px;
+        height: 64px;
+        font-size: 48px;
+        }
+        .buttonL{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: 100px;
+        left: 400px;
+        width: 64px;
+        height: 64px;
+        font-size: 48px;
+        }
+        .buttonU{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: 200px;
+        left: 500px;
+        width: 64px;
+        height: 64px;
+        font-size: 48px;
+        }
+        .buttonD{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: 100px;
+        left: 500px;
+        width: 64px;
+        height: 64px;
+        font-size: 48px;
+        }
+  			
   html, body {
     height: 100%;
     margin: 0;
@@ -134,6 +176,39 @@ function loop() {
 }
 
 // listen to keyboard events to move the snake
+
+//Here is javascript;
+
+// left key
+  function l() {
+    if(snake.dx === 0) {
+      snake.dx = -grid;
+      snake.dy = 0;
+    }
+  }
+
+  // up key
+  function u() {
+    if(snake.dy === 0) {
+      snake.dy = -grid;
+      snake.dx = 0;
+    }
+  }
+
+  // right key 
+  function r() {
+    if(snake.dx === 0) {
+      snake.dx = grid;
+      snake.dy = 0;
+    }
+  }
+  // down key 
+  function d() {
+    if(snake.dy === 0) {
+      snake.dy = grid;
+      snake.dx = 0;
+    }
+  }
 document.addEventListener('keydown', function(e) {
   // prevent snake from backtracking on itself by checking that it's 
   // not already moving on the same axis (pressing left while moving
@@ -161,9 +236,17 @@ document.addEventListener('keydown', function(e) {
     snake.dx = 0;
   }
 });
+   
+  
 
 // start the game
 requestAnimationFrame(loop);
 </script>
+ <div>
+  <button class="buttonU" onclick="u()" type="button" id="U">↑</button>
+  <button class="buttonL" onclick="l()" type="button" id="L">←</button>
+  <button class="buttonR" onclick="r()" type="button" id="R">→</button>
+  <button class="buttonD" onclick="d()" type="button" id="D">↓</button>
+</div>
 </body>
 </html>
