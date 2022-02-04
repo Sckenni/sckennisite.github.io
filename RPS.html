@@ -4,6 +4,8 @@
 <title>КНБ</title>
 </head>
 <body>
+<p><button> <a href="index.html">Обратно на главную</button></p>
+	</body>
   <style>
     body {
       text-align: center;
@@ -72,9 +74,9 @@
     </div>
     <h2>Нажми на изображение снизу:<h2>
     <div class="action">
-      <input class="options" type="image" src="./assets/Rock.svg" value="Rock" />
-      <input class="options" type="image" src="./assets/Paper.svg" value="Paper" />
-      <input class="options" type="image" src="./assets/Scissors.svg" value="Scissors" />
+      <input class="options" type="image" src="./assets/Rock.svg" value="Камень" />
+      <input class="options" type="image" src="./assets/Paper.svg" value="Бумага" />
+      <input class="options" type="image" src="./assets/Scissors.svg" value="Ножницы" />
     </div>
   </div>
   <script>
@@ -108,26 +110,24 @@
     function compareInputs(pInput, cInput) {
       const currentMatch = `${pInput} vs ${cInput}`;
       if (pInput === cInput) {
-        alert(`${currentMatch} ничья`);
+        alert(`$Точно? :)`);
         return;
       }
 
       if (pInput === "Rock") {
         if (cInput === "Scissors") {
-          alert(`${currentMatch} = Ты выиграл`);
+          alert(`$Точно? :)`);
           pScore++;
         } else {
-          alert(`${currentMatch} = Бот выиграл`);
+          alert(`$Точно? :)`);
           cScore++;
         }
       }
       //Check for Paper
       else if (pInput === "Paper") {
         if (cInput === "Rock") {
-          alert(`${currentMatch} = Ты выиград`);
           pScore++;
         } else {
-          alert(`${currentMatch} = Бот выиграл`);
           cScore++;
         }
       }
